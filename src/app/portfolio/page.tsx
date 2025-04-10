@@ -1,11 +1,12 @@
 /*
     Name:           William Anderson
     Date:           April 10, 2025
-    Description:    Projects page. Holds info on all projects in a long scrollable page.
+    Description:    Portfolio page. Holds info on all projects in a long scrollable page.
 */
 
 import { Project } from '../../types/project'; 
 import { getProjects } from '../../utils/getProjects'; 
+import Image from 'next/image'; 
 
 const PortfolioPage = async () => {
   //  Get the projects from json data.
@@ -14,9 +15,7 @@ const PortfolioPage = async () => {
   return (
     <div>
       <h1>Portfolio</h1>
-      {projects.length == 0 ? (
-        <p>No projects found.</p>
-      ) : (
+      {projects.length == 0 ? (<p>No projects found.</p>) : (
         <ul>
           {projects.map((project) => (
             <li key={project.title}>
@@ -31,7 +30,14 @@ const PortfolioPage = async () => {
               </ul>
               <div>
                 {project.images.map((image, index) => (
-                  <img key={index} src={`/${image}`} alt={`${project.title} - ${index}`} width={540} />
+                    <Image
+                        key={index}
+                        src={`/${image}`}
+                        alt={`${project.title} - ${index}`}
+                        width={540}
+                        height={360}
+                        layout="intrinsic" // For the aspect ratio
+                    />
                 ))}
               </div>
             </li>
@@ -39,7 +45,7 @@ const PortfolioPage = async () => {
         </ul>
       )}
     </div>
-  );
+ );
 };
 
 export default PortfolioPage;
