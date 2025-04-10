@@ -1,0 +1,33 @@
+export const projects = [
+  {
+    title: "Warehouse Watcher",
+    tag: "Capstone",
+    year: "2025",
+    description: "A warehouse monitoring system in which sensors transmit environmental and energy usages to a web application. The user can view a dashboard of current and historical data, look through a 3D visual of their warehouse, get alerted when thresholds are breached, and sync their inventory data with their Odoo account.",
+    technologies: ["Python",
+                   "Vue.js",
+                   "MQTT",
+                   "HiveMQ",
+                   "InfluxDB",
+                   "Firebase",
+                   "Grafana",
+                   "Flask",
+                   "Vercel",
+                   "Azure"],
+    concepts: ["Full Stack Microservices Architecture",
+               "IOT - MQTT Communications",
+               "Time-Series Database",
+               "Cloud Development",
+               "Data Modeling",
+               "Event-driven"]
+    images: ["images/capstone_login",
+             "images/capstone_dashboard.jpg",
+             "images/capstone_3d.jpg",
+             "images/capstone_admin.jpg"],
+    programmers: ["William Anderson",
+                  "Yujung Park",
+                  "Amel Korandippillil",
+                  "Aryan Pramod Passi",
+                  "Salma Rageh"]
+  },
+];
