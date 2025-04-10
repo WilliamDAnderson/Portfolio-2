@@ -21,7 +21,7 @@ const PortfolioPage = async () => {
           {projects.map((project) => (
             <li key={project.title}>
               <h2>{project.title}</h2>
-              <p><strong>priority:</strong> {project.tag}</p>
+              <p><strong>priority:</strong> {project.priority}</p>
               <p><strong>Year:</strong> {project.year}</p>
               <p><strong>Description:</strong>{project.description}</p>
               <ul>

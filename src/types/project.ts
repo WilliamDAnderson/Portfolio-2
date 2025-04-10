@@ -4,7 +4,7 @@
     Description:    Projects
 */
 
-type Project = {
+export type Project = {
     title: string;
     priority: string;
     year: string;
