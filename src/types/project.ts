@@ -4,13 +4,15 @@
     Description:    Projects
 */
 
+export type StoryPoint = {
+    title: string;
+    text: string;
+    image: string;
+  };
+  
 export type Project = {
     title: string;
-    priority: string;
-    year: string;
-    description: string;
-    technologies: string[];
-    concepts: string[];
-    images: string[];
+    year: number;
     programmers: string[];
+    features: StoryPoint[];
   };

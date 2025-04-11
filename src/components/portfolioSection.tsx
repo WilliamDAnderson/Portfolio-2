@@ -22,61 +22,48 @@ const PortfolioSection = () => {
   }
 
   return (
-    <main className="px-4 py-12">
+    <div className="px-4 py-12">
       <h1 className="text-4xl font-bold text-center mb-12 pt-12">Portfolio</h1>
 
       <div className="grid gap-10 grid-cols-1">
         {projects.map((project) => (
+
           <div key={project.title}
-               className="max-w-[1080px] mx-auto bg-[var(--foreground)] text-[var(--background)] rounded-2xl shadow-lg overflow-hidden flex flex-col"
+               className="p-6 w-full max-w-[1080px] mx-auto bg-[var(--foreground)] text-[var(--background)] rounded-2xl overflow-hidden flex flex-col"
           >
-            <div className="p-6 w-full">
-              <h2 className="text-center text-2xl font-semibold mb-4">{project.title}</h2>
-              <p className="mb-4">{project.description}</p>
+          <h2 className="text-center text-2xl font-semibold mb-4">{project.title}</h2>
+          <p className="mb-4">{project.description}</p>
 
-              <div className="text-sm space-y-1">
-                <p>
-                  <span className="font-medium">Technologies:</span>{' '}
-                  {project.technologies.join(', ')}
-                </p>
-                <p>
-                  <span className="font-medium">Concepts:</span>{' '}
-                  {project.concepts.join(', ')}
-                </p>
-              </div>
-            </div>
+              {project.features.length > 0 && (
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 justify-center">
+                  {project.features.map((feature, index) => (
+                    <div
+                      key={index}
+                      className="bg-[var(--background)] text-[var(--foreground)] rounded-xl shadow-md p-4"
+                    >
 
-            {project.images.length > 0 && (
-              <div className="grid grid-cols-1 gap-2 p-4 pt-0">
-                {project.images.map((img, index) => (
-                  <div
-                    key={index}
-                    className="relative w-full h-auto rounded-md overflow-hidden mx-auto"
-                  >
-                    <Image
-                      src={img}
-                      alt={`${project.title} - ${index + 1}`}
-                      layout="responsive"
-                      objectFit="cover"
-                      width={540}
-                      height={360}
-                    />
-                  </div>
-                ))}
-              </div>
-            )}
+                      <h3 className="text-lg font-semibold mb-1 text-center">{feature.title}</h3>
+                      <div className="w-full mb-3 rounded-md overflow-hidden">
+                        <Image
+                          src={feature.image}
+                          alt={`${feature.title}`}
+                          layout="responsive"
+                          objectFit="cover"
+                          width="720"
+                          height="540"
+                          className="rounded"
+                        />
+                      </div>
+                      <p className="text-sm">{feature.description}</p>
 
-            <div className="p-6 text-sm space-y-1">
-              <p>
-                <span className="font-medium">Programmers:</span>{' '}
-                {project.programmers.join(', ')}
-              </p>
-            </div>
-
+                    </div>
+                  ))}
+                </div>
+              )}
           </div>
         ))}
       </div>
-    </main>
+    </div>
   );
 };
 
