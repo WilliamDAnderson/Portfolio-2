@@ -25,39 +25,48 @@ const PortfolioSection = () => {
     <div className="px-4 py-12">
       <h1 className="text-4xl font-bold text-center mb-12 pt-12">Portfolio</h1>
 
-      <div className="grid gap-10 grid-cols-1">
+      <div className="grid grid-cols-1">
         {projects.map((project) => (
 
           <div key={project.title}
-               className="p-6 w-full max-w-[1080px] mx-auto bg-[var(--foreground)] text-[var(--background)] rounded-2xl overflow-hidden flex flex-col"
+               className="p-6 w-full max-w-19/20 mx-auto bg-[var(--project)] text-[var(--foreground)] rounded-2xl overflow-hidden flex flex-col shadow-lg justify-center text-center border-4 border-[var(--foreground)] rounded-xl"
           >
-          <h2 className="text-center text-2xl font-semibold mb-4">{project.title}</h2>
+          <h2 className="text-center text-3xl font-semibold mb-4">{project.title}</h2>
           <p className="mb-4">{project.description}</p>
 
               {project.features.length > 0 && (
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 justify-center">
-                  {project.features.map((feature, index) => (
-                    <div
-                      key={index}
-                      className="bg-[var(--background)] text-[var(--foreground)] rounded-xl shadow-md p-4"
-                    >
+                <div className="grid grid-cols-1 gap-16 justify-center">
 
-                      <h3 className="text-lg font-semibold mb-1 text-center">{feature.title}</h3>
-                      <div className="w-full mb-3 rounded-md overflow-hidden">
+                {project.features.map((feature, index) => (
+                  <div
+                    key={index}
+                    className={`flex flex-col md:flex-row gap-4 ${
+                      index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                    }`}
+                  >
+                    {/* Text section */}
+                    <div className="w-full md:w-1/3 flex flex-col justify-center text-center px-4 py-2">
+                      <h3 className="text-lg font-semibold">{feature.title}</h3>
+                      <p className="text-md">{feature.description}</p>
+                    </div>
+                
+                    {/* Image section */}
+                    <div className="w-full md:w-2/3 shadow-lg bg-[var(--background)] rounded-xl overflow-hidden border-4 border-[var(--foreground)] rounded-xl">
+                      <div className="w-full">
                         <Image
                           src={feature.image}
-                          alt={`${feature.title}`}
+                          alt={feature.title}
                           layout="responsive"
                           objectFit="cover"
-                          width="720"
-                          height="540"
+                          width={720}
+                          height={480}
                           className="rounded"
                         />
                       </div>
-                      <p className="text-sm">{feature.description}</p>
-
                     </div>
-                  ))}
+                  </div>
+                ))}
+              
                 </div>
               )}
           </div>

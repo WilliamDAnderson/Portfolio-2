@@ -7,7 +7,7 @@
     "features": [
                   {
                     "title": "Login",
-                    "description": "Firebase login setup for secure entry. Deployed with Vercel",
+                    "description": "Firebase login setup for secure entry. Deployed with Vercel.",
                     "image": "/images/capstone/login.jpg"
                   },
                   {
