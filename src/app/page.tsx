@@ -1,3 +1,9 @@
+/*
+    Name:           William Anderson
+    Date:           April 10, 2025
+    Description:    Main page. Holds Home and PortfolioSection.
+*/
+
 import PortfolioSection from '@/components/portfolioSection';
 
 export default function Home() {
