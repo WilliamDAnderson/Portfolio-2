@@ -26,30 +26,27 @@ export default function RootLayout({
   return (
 	<html lang="en">
 		<body className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}>
-			<header className="p-4 font-bold">
+			<header className="fixed top-0 left-0 w-full z-50 p-4  font-bold">
 				<nav className="container mx-auto flex items-center">
 					<div className="flex-grow">
-						<Link href="/"
-							className="font-bold"
-						>
+						<Link href="/" className="font-bold">
 							Home
 						</Link>
 					</div>
 					<div className="flex space-x-4">
-						<Link href="/portfolio"
-								className="font-bold"
-						>
+						<Link href="/portfolio" className="font-bold">
 							Portfolio
 						</Link>
-						<Link href="/contact"
-								className="font-bold"
-						>
+						<Link href="/resume" className="font-bold">
+							Resume
+						</Link>
+						<Link href="/contact" className="font-bold">
 							Contact
 						</Link>
 					</div>
 				</nav>
 			</header>
-			<main className="flex-grow">{children}</main> 
+			<main className="pt-16 min-h-screen flex items-center justify-center">{children}</main> 
 	  </body>
 	</html>
   );

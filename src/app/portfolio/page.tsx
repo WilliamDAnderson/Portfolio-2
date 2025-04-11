@@ -54,7 +54,7 @@ const PortfolioPage = async () => {
                     className="relative w-full h-auto rounded-md overflow-hidden mx-auto"
                   >
                     <Image
-                      src={`/${img}`}
+                      src={img}
                       alt={`${project.title} - ${index + 1}`}
                       layout="responsive"
                       objectFit="cover"
