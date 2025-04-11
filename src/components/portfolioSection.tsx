@@ -8,10 +8,12 @@ import { Project } from '@/types/project';
 import { getProjects } from '@/utils/getProjects'; 
 import Image from 'next/image'; 
 
-const PortfolioSection = () => {
-  //  Get the projects from json data.
-  const projects: Project[] = getProjects(); 
+const projects: Project[] = getProjects().sort((projectA, projectB) => {
+  if (projectB.year != projectA.year) return projectB.year - projectA.year;
+  return  projectA.priority - projectB.priority;
+});
 
+const PortfolioSection = () => {
   if (projects.length == 0) {
     return (
       <main className="max-w-4xl mx-auto px-4 py-10 text-center">
@@ -29,7 +31,7 @@ const PortfolioSection = () => {
         {projects.map((project) => (
 
           <div key={project.title}
-               className="p-6 w-full max-w-19/20 mx-auto bg-[var(--project)] text-[var(--foreground)] rounded-2xl overflow-hidden flex flex-col shadow-lg justify-center text-center border-4 border-[var(--foreground)] rounded-xl"
+               className="p-6 mb-16 w-full max-w-19/20 mx-auto bg-[var(--project)] text-[var(--foreground)] rounded-2xl overflow-hidden flex flex-col shadow-lg justify-center text-center border-4 border-[var(--foreground)] rounded-xl"
           >
           <h2 className="text-center text-3xl font-semibold mb-4">{project.title}</h2>
           <p className="mb-4">{project.description}</p>

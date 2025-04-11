@@ -37,12 +37,6 @@ export default function RootLayout({
 						<Link href="/#portfolio" className="font-bold">
 							Portfolio
 						</Link>
-						<Link href="/resume" className="font-bold">
-							Resume
-						</Link>
-						<Link href="/contact" className="font-bold">
-							Contact
-						</Link>
 					</div>
 				</nav>
 			</header>

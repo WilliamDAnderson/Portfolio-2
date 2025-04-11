@@ -1,8 +1,94 @@
 [
   {
-    "title": "Warehouse Watcher",
-    "priority": "1",
-    "year": "2025",
+    "title": "School Capstone Project",
+    "priority": 1,
+    "year": 2025,
+    "description": "A warehouse monitoring system built with a microservices architecture. Python backend services interact with a Vue.js front end to monitor the warehouse environment.",
+    "features": [
+                  {
+                    "title": "Login",
+                    "description": "Firebase login setup for secure entry. Deployed with Vercel.",
+                    "image": "/images/capstone/login.jpg"
+                  },
+                  {
+                    "title": "Simulator",
+                    "description": "Control the MQTT output from python Eclipse Paho sensors, another python subscriber stores this data in InfluxDB.",
+                    "image": "/images/capstone/simulator.jpg"
+                  },
+                  {
+                    "title": "3D Scene",
+                    "description": "View the warehouse sensors in real-time. View inventory data synced with Odoo.",
+                    "image": "/images/capstone/3d_scene.jpg"
+                  },
+                  {
+                    "title": "Admin",
+                    "description": "Controls the alert thresholds for environmental sensors.",
+                    "image": "/images/capstone/threshold_settings.jpg"
+                  },
+                  {
+                    "title": "Dashboard",
+                    "description": "Grafana integrated dashboard view with a Admin thresholds automatically updated.",
+                    "image": "/images/capstone/dashboard.jpg"
+                  },
+                  {
+                    "title": "Report",
+                    "description": "Produces PDF/CSV/EXCEL report files for sensor data over a specified time.",
+                    "image": "/images/capstone/report.jpg"
+                  }
+                ],
+    "programmers": ["William Anderson",
+                    "Yujung Park",
+                    "Amel Korandippillil",
+                    "Aryan Pramod Passi",
+                    "Salma Rageh"]
+  },
+  {
+    "title": "Warehouse Watcher-2024-2",
+    "priority": 2,
+    "year": 2024,
+    "description": "A warehouse monitoring system built with a microservices architecture. Python backend services interact with a Vue.js front end to monitor the warehouse environment.",
+    "features": [
+                  {
+                    "title": "Login",
+                    "description": "Firebase login setup for secure entry. Deployed with Vercel.",
+                    "image": "/images/capstone/login.jpg"
+                  },
+                  {
+                    "title": "Simulator",
+                    "description": "Control the MQTT output from python Eclipse Paho sensors, another python subscriber stores this data in InfluxDB.",
+                    "image": "/images/capstone/simulator.jpg"
+                  },
+                  {
+                    "title": "3D Scene",
+                    "description": "View the warehouse sensors in real-time. View inventory data synced with Odoo.",
+                    "image": "/images/capstone/3d_scene.jpg"
+                  },
+                  {
+                    "title": "Admin",
+                    "description": "Controls the alert thresholds for environmental sensors.",
+                    "image": "/images/capstone/threshold_settings.jpg"
+                  },
+                  {
+                    "title": "Dashboard",
+                    "description": "Grafana integrated dashboard view with a Admin thresholds automatically updated.",
+                    "image": "/images/capstone/dashboard.jpg"
+                  },
+                  {
+                    "title": "Report",
+                    "description": "Produces PDF/CSV/EXCEL report files for sensor data over a specified time.",
+                    "image": "/images/capstone/report.jpg"
+                  }
+                ],
+    "programmers": ["William Anderson",
+                    "Yujung Park",
+                    "Amel Korandippillil",
+                    "Aryan Pramod Passi",
+                    "Salma Rageh"]
+  },
+  {
+    "title": "Warehouse Watcher-2024-1",
+    "priority": 1,
+    "year": 2024,
     "description": "A warehouse monitoring system built with a microservices architecture. Python backend services interact with a Vue.js front end to monitor the warehouse environment.",
     "features": [
                   {
