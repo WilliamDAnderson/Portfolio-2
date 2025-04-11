@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
 	<html lang="en">
 		<body className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}>
-			<header className="p-4 shadow-md font-bold text-color-background">
+			<header className="p-4 font-bold">
 				<nav className="container mx-auto flex items-center">
 					<div className="flex-grow">
 						<Link href="/"

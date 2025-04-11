@@ -3,9 +3,6 @@
 :root {
     --background: #FCFCFC;
     --foreground: #02111B;
-    --header: #5D737E;
-    --accent_1: #30292F;
-    --accent_2: #3F4045;
 }
 
 @theme inline {
@@ -30,5 +27,6 @@ body {
 }
 
 header {
-  background-color: var(--header);
+  background-color: var(--foreground);
+  color: var(--background);
 }

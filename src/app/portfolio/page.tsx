@@ -12,40 +12,72 @@ const PortfolioPage = async () => {
   //  Get the projects from json data.
   const projects: Project[] = getProjects(); 
 
+  if (projects.length == 0) {
+    return (
+      <main className="max-w-4xl mx-auto px-4 py-10 text-center">
+        <h1 className="text-3xl font-bold mb-4">My Portfolio</h1>
+        <p className="text-gray-500">No projects found.</p>
+      </main>
+    );
+  }
+
   return (
-    <div>
-      <h1>Portfolio</h1>
-      {projects.length == 0 ? (<p>No projects found.</p>) : (
-        <ul>
-          {projects.map((project) => (
-            <li key={project.title}>
-              <h2>{project.title}</h2>
-              <p><strong>priority:</strong> {project.priority}</p>
-              <p><strong>Year:</strong> {project.year}</p>
-              <p><strong>Description:</strong>{project.description}</p>
-              <ul>
-                <li><strong>Technologies:</strong> {project.technologies.join(', ')}</li>
-                <li><strong>Concepts:</strong> {project.concepts.join(', ')}</li>
-                <li><strong>Programmers:</strong> {project.programmers.join(', ')}</li>
-              </ul>
-              <div>
-                {project.images.map((image, index) => (
+    <main className="px-4 py-12">
+      <h1 className="text-4xl font-bold text-center mb-12">Portfolio</h1>
+
+      <div className="grid gap-10 grid-cols-1">
+        {projects.map((project) => (
+          <div key={project.title}
+               className="max-w-[1080px] mx-auto bg-[var(--foreground)] text-[var(--background)] rounded-2xl shadow-lg overflow-hidden flex flex-col"
+          >
+            <div className="p-6 w-full">
+              <h2 className="text-center text-2xl font-semibold mb-4">{project.title}</h2>
+              <p className="mb-4">{project.description}</p>
+
+              <div className="text-sm space-y-1">
+                <p>
+                  <span className="font-medium">Technologies:</span>{' '}
+                  {project.technologies.join(', ')}
+                </p>
+                <p>
+                  <span className="font-medium">Concepts:</span>{' '}
+                  {project.concepts.join(', ')}
+                </p>
+              </div>
+            </div>
+
+            {project.images.length > 0 && (
+              <div className="grid grid-cols-1 gap-2 p-4 pt-0">
+                {project.images.map((img, index) => (
+                  <div
+                    key={index}
+                    className="relative w-full h-auto rounded-md overflow-hidden mx-auto"
+                  >
                     <Image
-                        key={index}
-                        src={`/${image}`}
-                        alt={`${project.title} - ${index}`}
-                        width={540}
-                        height={360}
-                        layout="intrinsic" // For the aspect ratio
+                      src={`/${img}`}
+                      alt={`${project.title} - ${index + 1}`}
+                      layout="responsive"
+                      objectFit="cover"
+                      width={540}
+                      height={360}
                     />
+                  </div>
                 ))}
               </div>
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
- );
+            )}
+
+            <div className="p-6 text-sm space-y-1">
+              <p>
+                <span className="font-medium">Programmers:</span>{' '}
+                {project.programmers.join(', ')}
+              </p>
+            </div>
+
+          </div>
+        ))}
+      </div>
+    </main>
+  );
 };
 
 export default PortfolioPage;
