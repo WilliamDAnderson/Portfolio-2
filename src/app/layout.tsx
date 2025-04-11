@@ -34,7 +34,7 @@ export default function RootLayout({
 						</Link>
 					</div>
 					<div className="flex space-x-4">
-						<Link href="/portfolio" className="font-bold">
+						<Link href="/#portfolio" className="font-bold">
 							Portfolio
 						</Link>
 						<Link href="/resume" className="font-bold">
@@ -46,7 +46,7 @@ export default function RootLayout({
 					</div>
 				</nav>
 			</header>
-			<main className="pt-16 min-h-screen flex items-center justify-center">{children}</main> 
+			<main className="pt-1 min-h-screen flex items-center justify-center">{children}</main> 
 	  </body>
 	</html>
   );

@@ -1,14 +1,14 @@
 /*
     Name:           William Anderson
     Date:           April 10, 2025
-    Description:    Portfolio page. Holds info on all projects in a long scrollable page.
+    Description:    Portfolio section. Holds info on all projects in a long scrollable page.
 */
 
-import { Project } from '../../types/project'; 
-import { getProjects } from '../../utils/getProjects'; 
+import { Project } from '@/types/project'; 
+import { getProjects } from '@/utils/getProjects'; 
 import Image from 'next/image'; 
 
-const PortfolioPage = async () => {
+const PortfolioSection = () => {
   //  Get the projects from json data.
   const projects: Project[] = getProjects(); 
 
@@ -23,7 +23,7 @@ const PortfolioPage = async () => {
 
   return (
     <main className="px-4 py-12">
-      <h1 className="text-4xl font-bold text-center mb-12">Portfolio</h1>
+      <h1 className="text-4xl font-bold text-center mb-12 pt-12">Portfolio</h1>
 
       <div className="grid gap-10 grid-cols-1">
         {projects.map((project) => (
@@ -80,4 +80,4 @@ const PortfolioPage = async () => {
   );
 };
 
-export default PortfolioPage;
+export default PortfolioSection;
