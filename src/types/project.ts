@@ -4,15 +4,17 @@
     Description:    Projects
 */
 
-export type StoryPoint = {
+export type Feature = {
     title: string;
-    text: string;
+    description: string;
     image: string;
   };
   
 export type Project = {
     title: string;
+    priority: number;
     year: number;
+    description: string;
     programmers: string[];
-    features: StoryPoint[];
+    features: Feature[];
   };
