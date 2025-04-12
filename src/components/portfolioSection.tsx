@@ -46,45 +46,53 @@ const PortfolioSection = () => {
               </h1>
             </div>
   
-            {/* Projects for this year */}
+            {/* Project Section */}
             {yearProjects.map((project) => (
               <div key={project.title} className="pt-16 pb-16 w-[95%] max-w-[1536px] mx-auto">
                 <div className="p-6 bg-[var(--project)] text-[var(--foreground)] rounded-2xl overflow-hidden flex flex-col shadow-2xl justify-center text-center rounded-xl">
-                <h2 className="text-center text-3xl font-semibold mb-4">{project.title}</h2>
-                <p className="mb-4">{project.description}</p>
+                  <h2 className="text-center text-3xl font-semibold mb-4">{project.title}</h2>
+                  <p className="mb-4">{project.description}</p>
 
-              {/* Project features */}
-              {project.features.length > 0 && (
-                <div className="grid grid-cols-1 gap-16 justify-center">
-                  {project.features.map((feature, index) => (
-                    <div
-                      key={index}
-                      className={`flex flex-col md:flex-row gap-4 ${
-                        index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                      }`}
-                    >
-                      {/* Text section */}
-                      <div className="w-full md:w-1/3 flex flex-col justify-center text-center px-4 py-2">
-                        <h3 className="text-lg font-semibold">{feature.title}</h3>
-                        <p className="text-md">{feature.description}</p>
-                      </div>
+                  {/* Features Section */}
+                  {project.features.length > 0 && (
+                    <div className="grid grid-cols-1 gap-16 justify-center">
+                      {project.features.map((feature, index) => (
+                        <div
+                          key={index}
+                          className={`flex flex-col md:flex-row gap-4 ${
+                            index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                          }`}
+                        >
+                          {/* Text Section */}
+                          <div className="w-full md:w-1/3 flex flex-col justify-center text-center px-4 py-2">
+                            <h3 className="text-lg font-semibold">{feature.title}</h3>
+                            <p className="text-md">{feature.description}</p>
+                          </div>
 
-                      {/* Image section */}
-                      <div className="w-full md:w-2/3 shadow-2xl bg-[var(--background)] rounded-xl overflow-hidden">
-                        <div className="w-full">
-                          <Image
-                            src={feature.image}
-                            alt={feature.title}
-                            layout="responsive"
-                            objectFit="cover"
-                            width={720}
-                            height={480}
-                            className="rounded"
-                            />
+                          {/* Image Section */}
+                          <div className="w-full md:w-2/3 shadow-2xl bg-[var(--background)] rounded-xl overflow-hidden">
+                            <div className="w-full">
+                              <Image
+                                src={feature.image}
+                                alt={feature.title}
+                                layout="responsive"
+                                objectFit="cover"
+                                width={720}
+                                height={480}
+                                className="rounded"
+                              />
                             </div>
                           </div>
                         </div>
                       ))}
+                    </div>
+                  )}
+
+                  {/* Programmers Section*/}
+                  {project.programmers && project.programmers.length > 0 && (
+                    <div className="mt-8 text-center">
+                      <h3 className="text-xl font-semibold mb-2">Programmers</h3>
+                      <p className="text-md">{project.programmers.join(', ')}</p>
                     </div>
                   )}
                 </div>

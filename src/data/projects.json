@@ -8,32 +8,32 @@
                   {
                     "title": "Login",
                     "description": "Firebase login setup for secure entry. Deployed with Vercel.",
-                    "image": "/images/capstone/login.jpg"
+                    "image": "/images/college_capstone/login.jpg"
                   },
                   {
                     "title": "Simulator",
                     "description": "Control the MQTT output from python Eclipse Paho sensors, another python subscriber stores this data in InfluxDB.",
-                    "image": "/images/capstone/simulator.jpg"
+                    "image": "/images/college_capstone/simulator.jpg"
                   },
                   {
                     "title": "3D Scene",
                     "description": "View the warehouse sensors in real-time. View inventory data synced with Odoo.",
-                    "image": "/images/capstone/3d_scene.jpg"
+                    "image": "/images/college_capstone/3d_scene.jpg"
                   },
                   {
                     "title": "Admin",
                     "description": "Controls the alert thresholds for environmental sensors.",
-                    "image": "/images/capstone/threshold_settings.jpg"
+                    "image": "/images/college_capstone/threshold_settings.jpg"
                   },
                   {
                     "title": "Dashboard",
                     "description": "Grafana integrated dashboard view with a Admin thresholds automatically updated.",
-                    "image": "/images/capstone/dashboard.jpg"
+                    "image": "/images/college_capstone/dashboard.jpg"
                   },
                   {
                     "title": "Report",
                     "description": "Produces PDF/CSV/EXCEL report files for sensor data over a specified time.",
-                    "image": "/images/capstone/report.jpg"
+                    "image": "/images/college_capstone/report.jpg"
                   }
                 ],
     "programmers": ["William Anderson",
