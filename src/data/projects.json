@@ -51,17 +51,17 @@
                   {
                     "title": "Project Makefiles",
                     "description": "Modular Makefiles automate the build process for each component for an easy system-wide clean and make process.",
-                    "image": "/images/chat-system/makefiles.jpg"
+                    "image": "/images/chat_system/makefiles.jpg"
                   },
                   {
                     "title": "Chat Client",
                     "description": "A terminal-based UI displays messages to the user and allows the user to participate in the chat.",
-                    "image": "/images/chat-system/1-chat.jpg"
+                    "image": "/images/chat_system/1-chat.jpg"
                   },
                   {
                     "title": "Chat System",
                     "description": "Up to 10 clients are supported on a multi-threaded server with a graceful disconnect process.",
-                    "image": "/images/chat-system/3-chats.jpg"
+                    "image": "/images/chat_system/3-chats.jpg"
                   }
                 ],
     "programmers": ["William Anderson",
@@ -76,17 +76,17 @@
                   {
                     "title": "Project Makefiles",
                     "description": "Makefiles for each of the two producers, reader, and common.",
-                    "image": "/images/histogram/makefiles.jpg"
+                    "image": "/images/histo_system/makefiles.jpg"
                   },
                   {
                     "title": "Semaphore and Shared Memory",
                     "description": "A Semaphore access between the producers to the circular buffer in shared memory",
-                    "image": "/images/histogram/sem-id.jpg"
+                    "image": "/images/histo_system/sem-id.jpg"
                   },
                   {
                     "title": "Histogram",
                     "description": "Every 10 seconds the count for each letter written is summed and displayed.",
-                    "image": "/images/histogram/histogram.jpg"
+                    "image": "/images/histo_system/histogram.jpg"
                   }
                 ],
     "programmers": ["William Anderson",
