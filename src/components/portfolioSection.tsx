@@ -34,7 +34,7 @@ const PortfolioSection = () => {
   }
 
   return (
-    <div className="px-4">
+    <div id="portfolio" className="scroll-mt-16 px-4">
       {Object.entries(groupedProjects)
         .sort(([year1], [year2]) => Number(year2) - Number(year1)) // <-- Sort years descending
         .map(([year, yearProjects]) => (
