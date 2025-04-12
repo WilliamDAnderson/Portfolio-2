@@ -46,7 +46,7 @@
     "title": "Chat-System",
     "priority": 1,
     "year": 2023,
-    "description": "A Linux system programming project to build a chat server in ANSI C.",
+    "description": "A Linux system programming project to build a chat server written in ANSI C.",
     "features": [
                   {
                     "title": "Project Makefiles",
@@ -66,5 +66,30 @@
                 ],
     "programmers": ["William Anderson",
                     "Jesse Rutledge"]
+  },
+  {
+    "title": "Circular-Buffer Histogram",
+    "priority": 2,
+    "year": 2023,
+    "description": "A Linux system programming project written in ANSI C. Two data producers write random letters (with two separate methodologies) to shared memory and a data reader displays a histogram in the terminal.",
+    "features": [
+                  {
+                    "title": "Project Makefiles",
+                    "description": "Makefiles for each of the two producers, reader, and common.",
+                    "image": "/images/histogram/makefiles.jpg"
+                  },
+                  {
+                    "title": "Semaphore and Shared Memory",
+                    "description": "A Semaphore access between the producers to the circular buffer in shared memory",
+                    "image": "/images/histogram/sem-id.jpg"
+                  },
+                  {
+                    "title": "Histogram",
+                    "description": "Every 10 seconds the count for each letter written is summed and displayed.",
+                    "image": "/images/histogram/histogram.jpg"
+                  }
+                ],
+    "programmers": ["William Anderson",
+                    "Addison Phillips"]
   }
 ]
