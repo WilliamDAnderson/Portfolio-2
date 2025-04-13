@@ -6,7 +6,9 @@
 
 import { Project } from '@/types/project'; 
 import { getProjects } from '@/utils/getProjects'; 
+import FeatureSection from '@/components/featureSection';
 import Image from 'next/image'; 
+import { motion } from 'framer-motion';
 
 const projects: Project[] = getProjects().sort((projectA, projectB) => {
   if (projectB.year != projectA.year) return projectB.year - projectA.year; 
@@ -53,37 +55,11 @@ const PortfolioSection = () => {
                   <h2 className="text-center text-3xl font-semibold mb-4">{project.title}</h2>
                   <p className="mb-4">{project.description}</p>
 
-                  {/* Features Section */}
+                  {/* Features Section rendered on Client*/}
                   {project.features.length > 0 && (
                     <div className="grid grid-cols-1 gap-16 justify-center">
                       {project.features.map((feature, index) => (
-                        <div
-                          key={index}
-                          className={`flex flex-col md:flex-row gap-4 ${
-                            index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                          }`}
-                        >
-                          {/* Text Section */}
-                          <div className="w-full md:w-1/3 flex flex-col justify-center text-center px-4 py-2">
-                            <h3 className="text-lg font-semibold">{feature.title}</h3>
-                            <p className="text-md">{feature.description}</p>
-                          </div>
-
-                          {/* Image Section */}
-                          <div className="w-full md:w-2/3 shadow-2xl bg-[var(--background)] rounded-xl overflow-hidden">
-                            <div className="w-full">
-                              <Image
-                                src={feature.image}
-                                alt={feature.title}
-                                layout="responsive"
-                                objectFit="cover"
-                                width={720}
-                                height={480}
-                                className="rounded"
-                              />
-                            </div>
-                          </div>
-                        </div>
+                        <FeatureSection key={index} feature={feature} index={index} />
                       ))}
                     </div>
                   )}
