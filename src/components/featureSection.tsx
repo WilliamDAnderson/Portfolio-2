@@ -20,8 +20,8 @@ export default function FeatureSection({ feature, index }: FeatureSectionProps) 
     <motion.div
       initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
       whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 1, ease: 'easeOut' }}
-      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 1, ease: 'easeInOut' }}
+      viewport={{ once: true, amount: 0.1 }}
       className={`flex flex-col md:flex-row gap-4 ${
         index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
       }`}
@@ -30,7 +30,7 @@ export default function FeatureSection({ feature, index }: FeatureSectionProps) 
         <h3 className="text-lg font-semibold">{feature.title}</h3>
         <p className="text-md">{feature.description}</p>
       </div>
-      <div className="w-full md:w-2/3 shadow-2xl bg-[var(--background)] rounded-xl overflow-hidden">
+      <div className="w-full md:w-2/3 shadow-2xl rounded-xl overflow-hidden">
         <Image
           src={feature.image}
           alt={feature.title}

@@ -37,25 +37,24 @@ const PortfolioSection = () => {
 
   return (
     <div id="portfolio" className="scroll-mt-16 px-4">
+
+      {/* Year Section sorted descending and the first of each is labelled */}
       {Object.entries(groupedProjects)
-        .sort(([year1], [year2]) => Number(year2) - Number(year1)) // <-- Sort years descending
+        .sort(([year1], [year2]) => Number(year2) - Number(year1)) 
         .map(([year, yearProjects]) => (
           <div key={year}>
-            {/* Year header (only one per year) */}
             <div className="w-[95%] max-w-[1536px] mx-auto">
-              <h1 className="text-4xl font-bold text-center pb-8 pt-8 border-b-4 border-t-4 border-[var(--foreground)]">
-                {year}
-              </h1>
+              <h1 className="text-5xl font-bold text-center pb-8 pt-8">{year}</h1>
             </div>
   
             {/* Project Section */}
             {yearProjects.map((project) => (
               <div key={project.title} className="pt-16 pb-16 w-[95%] max-w-[1536px] mx-auto">
-                <div className="p-6 bg-[var(--project)] text-[var(--foreground)] rounded-2xl overflow-hidden flex flex-col shadow-2xl justify-center text-center rounded-xl">
+                <div className="p-6 rounded-2xl overflow-hidden flex flex-col shadow-2xl justify-center text-center rounded-xl">
                   <h2 className="text-center text-3xl font-semibold mb-4">{project.title}</h2>
                   <p className="mb-4">{project.description}</p>
 
-                  {/* Features Section rendered on Client*/}
+                  {/* Features Section rendered on client */}
                   {project.features.length > 0 && (
                     <div className="grid grid-cols-1 gap-16 justify-center">
                       {project.features.map((feature, index) => (
@@ -64,7 +63,7 @@ const PortfolioSection = () => {
                     </div>
                   )}
 
-                  {/* Programmers Section*/}
+                  {/* Programmers Section */}
                   {project.programmers && project.programmers.length > 0 && (
                     <div className="mt-8 text-center">
                       <h3 className="text-xl font-semibold mb-2">Programmers</h3>

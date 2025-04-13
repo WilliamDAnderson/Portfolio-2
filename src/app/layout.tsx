@@ -29,12 +29,18 @@ export default function RootLayout({
 			<header className="fixed top-0 left-0 w-full z-50 p-4 font-bold border-b-2 border-[var(--background)]">
 				<nav className="container mx-auto flex items-center">
 					<div className="flex-grow">
-						<Link href="/" className="font-bold">
+						<Link
+							href="/"
+							className="font-bold px-3 py-2 rounded transition duration-300 hover:bg-[var(--background)] hover:text-[var(--foreground)]"
+						>
 							Home
 						</Link>
 					</div>
 					<div className="flex space-x-4">
-						<Link href="/#portfolio" className="font-bold">
+						<Link
+							href="/#portfolio"
+							className="font-bold px-3 py-2 rounded transition duration-300 hover:bg-[var(--background)] hover:text-[var(--foreground)]"
+						>
 							Portfolio
 						</Link>
 					</div>
