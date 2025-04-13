@@ -101,17 +101,17 @@
                   {
                     "title": "Chess Board GUI",
                     "description": "A classic chessboard GUI that is easy to interact with.",
-                    "image": "/images/chess/board.jpg"
+                    "image": "/images/chess_bot/board.jpg"
                   },
                   {
                     "title": "Chess Rules Enforced",
                     "description": "The bot obeys it's own valid moves and the UI shows the player their possible moves for any selected piece.",
-                    "image": "/images/chess/knight_moves.jpg"
+                    "image": "/images/chess_bot/knight_moves.jpg"
                   },
                   {
                     "title": "Good First Moves",
                     "description": "First moves are sensible and easy to make for the bot. Mid and late game are in development.",
-                    "image": "/images/chess/early_game.jpg"
+                    "image": "/images/chess_bot/early_game.jpg"
                   }
                 ],
     "programmers": ["William Anderson"]
