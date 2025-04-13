@@ -1,6 +1,6 @@
 [
   {
-    "title": "School Capstone Project",
+    "title": "College Capstone Project",
     "priority": 1,
     "year": 2025,
     "description": "A warehouse monitoring system built with a microservices architecture. Python backend services interact with a Vue.js front end to monitor the warehouse environment.",
@@ -91,5 +91,29 @@
                 ],
     "programmers": ["William Anderson",
                     "Addison Phillips"]
+  },
+  {
+    "title": "Chess Bot",
+    "priority": 1,
+    "year": 2024,
+    "description": "A Chess bot application built in Unity with C# where you play against the bot.",
+    "features": [
+                  {
+                    "title": "Chess Board GUI",
+                    "description": "A classic chessboard GUI that is easy to interact with.",
+                    "image": "/images/chess/board.jpg"
+                  },
+                  {
+                    "title": "Chess Rules Enforced",
+                    "description": "The bot obeys it's own valid moves and the UI shows the player their possible moves for any selected piece.",
+                    "image": "/images/chess/knight_moves.jpg"
+                  },
+                  {
+                    "title": "Good First Moves",
+                    "description": "First moves are sensible and easy to make for the bot. Mid and late game are in development.",
+                    "image": "/images/chess/early_game.jpg"
+                  }
+                ],
+    "programmers": ["William Anderson"]
   }
 ]

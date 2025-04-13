@@ -7,8 +7,6 @@
 import { Project } from '@/types/project'; 
 import { getProjects } from '@/utils/getProjects'; 
 import FeatureSection from '@/components/featureSection';
-import Image from 'next/image'; 
-import { motion } from 'framer-motion';
 
 const projects: Project[] = getProjects().sort((projectA, projectB) => {
   if (projectB.year != projectA.year) return projectB.year - projectA.year; 
