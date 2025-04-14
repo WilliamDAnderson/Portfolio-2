@@ -47,14 +47,14 @@ const PortfolioSection = () => {
   
             {/* Project Section */}
             {yearProjects.map((project) => (
-              <div key={project.title} className="pt-16 pb-16 w-[95%] max-w-[1536px] mx-auto">
+              <div key={project.title} className="pt-16 pb-16 w-[95%] lg:max-w-[85%] xl:max-w-[70%] max-w-[1536px]  mx-auto">
                 <div className="p-6 rounded-2xl overflow-hidden flex flex-col shadow-2xl justify-center text-center rounded-xl">
                   <h2 className="text-center text-3xl font-semibold mb-4">{project.title}</h2>
                   <p className="mb-4">{project.description}</p>
 
                   {/* Features Section rendered on client */}
                   {project.features.length > 0 && (
-                    <div className="grid grid-cols-1 gap-16 justify-center">
+                    <div className="grid grid-cols-1 gap-16 justify-center max-w-[90vw] mx-auto">
                       {project.features.map((feature, index) => (
                         <FeatureSection key={index} feature={feature} index={index} />
                       ))}
