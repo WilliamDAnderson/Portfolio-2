@@ -18,6 +18,7 @@ interface FeatureSectionProps {
 export default function FeatureSection({ feature, index }: FeatureSectionProps) {
   return (
     <motion.div
+      key={feature.title}
       initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 1, ease: 'easeInOut' }}
@@ -33,14 +34,15 @@ export default function FeatureSection({ feature, index }: FeatureSectionProps) 
       </div>
 
       {/* IMAGE SECTION */}
-      <div className="flex justify-center items-center w-full md:w-2/3">
-        <div className="relative rounded-xl overflow-hidden shadow-2xl">
+      <div className="flex justify-center items-center">
+        <div className="w-full h-auto overflow-hidden rounded-xl">
           <Image
             src={feature.image}
             alt={feature.title}
-            width={720}
-            height={480}
-            className="w-auto h-auto max-w-[66vw] max-h-[66vh] object-contain rounded"
+            width={0}
+            height={0}
+            sizes="100vw"
+            className="w-full h-auto max-h-[66vh] object-contain"
           />
         </div>
       </div>

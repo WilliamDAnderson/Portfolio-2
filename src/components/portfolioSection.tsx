@@ -35,19 +35,18 @@ const PortfolioSection = () => {
 
   return (
     <div id="portfolio" className="scroll-mt-16 px-4">
-
       {/* Year Section sorted descending and the first of each is labelled */}
       {Object.entries(groupedProjects)
-        .sort(([year1], [year2]) => Number(year2) - Number(year1)) 
+        .sort(([year1], [year2]) => Number(year2) - Number(year1))
         .map(([year, yearProjects]) => (
           <div key={year}>
             <div className="w-[95%] max-w-[1536px] mx-auto">
               <h1 className="text-5xl font-bold text-center pb-8 pt-8">{year}</h1>
             </div>
-  
+
             {/* Project Section */}
             {yearProjects.map((project) => (
-              <div key={project.title} className="pt-16 pb-16 w-[95%] lg:max-w-[85%] xl:max-w-[70%] max-w-[1536px]  mx-auto">
+              <div key={project.title} className="pt-16 pb-16 w-[95%] lg:max-w-[85%] xl:max-w-[70%] max-w-[1536px] mx-auto">
                 <div className="p-6 rounded-2xl overflow-hidden flex flex-col shadow-2xl justify-center text-center rounded-xl">
                   <h2 className="text-center text-3xl font-semibold mb-4">{project.title}</h2>
                   <p className="mb-4">{project.description}</p>
@@ -73,8 +72,8 @@ const PortfolioSection = () => {
             ))}
           </div>
         ))}
-      </div>
-    );
-  };
+    </div>
+  );
+};
 
 export default PortfolioSection;
