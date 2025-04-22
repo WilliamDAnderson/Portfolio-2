@@ -8,32 +8,32 @@
                   {
                     "title": "Login",
                     "description": "Firebase login setup for secure entry. Deployed with Vercel.",
-                    "image": "/images/college_capstone/login.jpg"
+                    "image": ["/images/college_capstone/login.jpg"]
                   },
                   {
                     "title": "Simulator",
                     "description": "Control the MQTT output from python Eclipse Paho sensors, another python subscriber stores this data in InfluxDB.",
-                    "image": "/images/college_capstone/simulator.jpg"
+                    "image": ["/images/college_capstone/simulator.jpg"]
                   },
                   {
                     "title": "3D Scene",
                     "description": "View the warehouse sensors in real-time. View inventory data synced with Odoo.",
-                    "image": "/images/college_capstone/3d_scene.jpg"
+                    "image": ["/images/college_capstone/3d_scene.jpg"]
                   },
                   {
                     "title": "Admin",
                     "description": "Controls the alert thresholds for environmental sensors.",
-                    "image": "/images/college_capstone/threshold_settings.jpg"
+                    "image": ["/images/college_capstone/threshold_settings.jpg"]
                   },
                   {
                     "title": "Dashboard",
                     "description": "Grafana integrated dashboard view with a Admin thresholds automatically updated.",
-                    "image": "/images/college_capstone/dashboard.jpg"
+                    "image": ["/images/college_capstone/dashboard.jpg"]
                   },
                   {
                     "title": "Report",
                     "description": "Produces PDF/CSV/EXCEL report files for sensor data over a specified time.",
-                    "image": "/images/college_capstone/report.jpg"
+                    "image": ["/images/college_capstone/report.jpg"]
                   }
                 ],
     "programmers": ["William Anderson",
@@ -41,56 +41,6 @@
                     "Amel Korandippillil",
                     "Aryan Pramod Passi",
                     "Salma Rageh"]
-  },
-  {
-    "title": "Chat-System",
-    "priority": 1,
-    "year": 2023,
-    "description": "A Linux system programming project to build a chat server written in ANSI C.",
-    "features": [
-                  {
-                    "title": "Project Makefiles",
-                    "description": "Modular Makefiles automate the build process for each component for an easy system-wide clean and make process.",
-                    "image": "/images/chat_system/makefiles.jpg"
-                  },
-                  {
-                    "title": "Chat Client",
-                    "description": "A terminal-based UI displays messages to the user and allows the user to participate in the chat.",
-                    "image": "/images/chat_system/1-chat.jpg"
-                  },
-                  {
-                    "title": "Chat System",
-                    "description": "Up to 10 clients are supported on a multi-threaded server with a graceful disconnect process.",
-                    "image": "/images/chat_system/3-chats.jpg"
-                  }
-                ],
-    "programmers": ["William Anderson",
-                    "Jesse Rutledge"]
-  },
-  {
-    "title": "Circular-Buffer Histogram",
-    "priority": 2,
-    "year": 2023,
-    "description": "A Linux system programming project written in ANSI C. Two data producers write random letters (with two separate methodologies) to shared memory and a data reader displays a histogram in the terminal.",
-    "features": [
-                  {
-                    "title": "Project Makefiles",
-                    "description": "Makefiles for each of the two producers, reader, and common.",
-                    "image": "/images/histo_system/makefiles.jpg"
-                  },
-                  {
-                    "title": "Semaphore and Shared Memory",
-                    "description": "A Semaphore access between the producers to the circular buffer in shared memory",
-                    "image": "/images/histo_system/sem-id.jpg"
-                  },
-                  {
-                    "title": "Histogram",
-                    "description": "Every 10 seconds the count for each letter written is summed and displayed.",
-                    "image": "/images/histo_system/histogram.jpg"
-                  }
-                ],
-    "programmers": ["William Anderson",
-                    "Addison Phillips"]
   },
   {
     "title": "Chess Bot",
@@ -101,19 +51,100 @@
                   {
                     "title": "Chess Board GUI",
                     "description": "A classic chessboard GUI that is easy to interact with.",
-                    "image": "/images/chess_bot/board.jpg"
+                    "image": ["/images/chess_bot/board.jpg"]
                   },
                   {
                     "title": "Chess Rules Enforced",
                     "description": "The bot obeys it's own valid moves and the UI shows the player their possible moves for any selected piece.",
-                    "image": "/images/chess_bot/knight_moves.jpg"
+                    "image": ["/images/chess_bot/knight_moves.jpg"]
                   },
                   {
                     "title": "Good First Moves",
                     "description": "First moves are sensible and easy to make for the bot. Mid and late game are in development.",
-                    "image": "/images/chess_bot/early_game.jpg"
+                    "image": ["/images/chess_bot/early_game.jpg"]
                   }
                 ],
     "programmers": ["William Anderson"]
+  },
+  {
+    "title": "Android Trip Planner",
+    "priority": 1,
+    "year": 2023,
+    "description": "Called the Great Canadian Trip Planner, this android app allows the user to book flights to Canadian cities.",
+    "features": [
+                  {
+                    "title": "View Trips and Write Notes",
+                    "description": "The user lands on the home screen to see all of their planned trips. They are able to add notes and an itinerary to each trip.",
+                    "image": ["/images/trip_planner/trip-viewer.jpg", "/images/trip_planner/notes.jpg"]
+                  },
+                  {
+                    "title": "Planning the Trip",
+                    "description": "To book a new trip the user selects the flight from pre-loaded cities, selects the date, and details about their trip.",
+                    "image": ["/images/trip_planner/trip-planner.jpg", "/images/trip_planner/trip-planner-2.jpg"]
+                  },
+                  {
+                    "title": "Trip Summary and Booking Confirmation",
+                    "description": "The user gets a chance to review the trip created, price, agree to terms, and confirm booking.",
+                    "image": ["/images/trip_planner/trip-summary.jpg", "/images/trip_planner/trip-booked.jpg"]
+                  },
+                  {
+                    "title": "Calendar Access and Notifications",
+                    "description": "If accepted, the application can record these trips in your calendar and send you notifications regarding them.",
+                    "image": ["/images/trip_planner/calendar-access.jpg", "/images/trip_planner/trip-notifications.jpg"]
+                  }
+                ],
+    "programmers": ["William Anderson",
+                    "Jennifer Fritz",
+                    "Addison Phillips"]
+  },
+  {
+    "title": "Chat-System",
+    "priority": 2,
+    "year": 2023,
+    "description": "A Linux system programming project to build a chat server written in ANSI C.",
+    "features": [
+                  {
+                    "title": "Project Makefiles",
+                    "description": "Modular Makefiles automate the build process for each component for an easy system-wide clean and make process.",
+                    "image": ["/images/chat_system/makefiles.jpg"]
+                  },
+                  {
+                    "title": "Chat Client",
+                    "description": "A terminal-based UI displays messages to the user and allows the user to participate in the chat.",
+                    "image": ["/images/chat_system/1-chat.jpg"]
+                  },
+                  {
+                    "title": "Chat System",
+                    "description": "Up to 10 clients are supported on a multi-threaded server with a graceful disconnect process.",
+                    "image": ["/images/chat_system/3-chats.jpg"]
+                  }
+                ],
+    "programmers": ["William Anderson",
+                    "Jesse Rutledge"]
+  },
+  {
+    "title": "Circular-Buffer Histogram",
+    "priority": 3,
+    "year": 2023,
+    "description": "A Linux system programming project written in ANSI C. Two data producers write random letters (with two separate methodologies) to shared memory and a data reader displays a histogram in the terminal.",
+    "features": [
+                  {
+                    "title": "Project Makefiles",
+                    "description": "Makefiles for each of the two producers, reader, and common.",
+                    "image": ["/images/histo_system/makefiles.jpg"]
+                  },
+                  {
+                    "title": "Semaphore and Shared Memory",
+                    "description": "A Semaphore access between the producers to the circular buffer in shared memory",
+                    "image": ["/images/histo_system/sem-id.jpg"]
+                  },
+                  {
+                    "title": "Histogram",
+                    "description": "Every 10 seconds the count for each letter written is summed and displayed.",
+                    "image": ["/images/histo_system/histogram.jpg"]
+                  }
+                ],
+    "programmers": ["William Anderson",
+                    "Addison Phillips"]
   }
 ]

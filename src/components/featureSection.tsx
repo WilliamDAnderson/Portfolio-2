@@ -16,6 +16,8 @@ interface FeatureSectionProps {
 }
 
 export default function FeatureSection({ feature, index }: FeatureSectionProps) {
+  const isOneImage = feature.image.length == 1;
+
   return (
     <motion.div
       key={feature.title}
@@ -34,16 +36,26 @@ export default function FeatureSection({ feature, index }: FeatureSectionProps) 
       </div>
 
       {/* IMAGE SECTION */}
-      <div className="flex justify-center items-center">
-        <div className="w-full h-auto overflow-hidden rounded-xl">
-          <Image
-            src={feature.image}
-            alt={feature.title}
-            width={0}
-            height={0}
-            sizes="100vw"
-            className="w-full h-auto max-h-[66vh] object-contain"
-          />
+      <div className="flex justify-center items-center w-full md:w-2/3 px-4">
+        <div
+          className={`flex ${isOneImage ? 'justify-center' : 'flex-wrap justify-center gap-4'}`}
+        >
+          {feature.image.map((img, idx) => (
+            <div
+              key={idx}
+              className={`relative overflow-hidden rounded-xl
+                ${isOneImage ? 'max-w-[66%] max-h-[66vh]' : 'w-[45%] max-h-[66vh]'}`}
+            >
+              <Image
+                src={img}
+                alt={`${feature.title} image ${idx + 1}`}
+                width={0}
+                height={0}
+                sizes="(max-width: 768px) 80vw, 66vw" // Adjust width for different breakpoints
+                className={`object-contain w-full h-full`} // Ensure image maintains aspect ratio
+              />
+            </div>
+          ))}
         </div>
       </div>
     </motion.div>
