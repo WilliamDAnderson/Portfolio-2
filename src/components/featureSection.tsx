@@ -16,7 +16,7 @@ interface FeatureSectionProps {
 }
 
 export default function FeatureSection({ feature, index }: FeatureSectionProps) {
-  const isOneImage = feature.image.length == 1;
+  const isOneImage = feature.image.length === 1;
 
   return (
     <motion.div
@@ -44,7 +44,7 @@ export default function FeatureSection({ feature, index }: FeatureSectionProps) 
             <div
               key={idx}
               className={`relative overflow-hidden rounded-xl
-                ${isOneImage ? 'max-w-[66%] max-h-[66vh]' : 'w-[45%] max-h-[66vh]'}`}
+                ${isOneImage ? 'w-full max-w-[66vw] max-h-[66vh]' : 'w-[45%] max-h-[66vh]'}`}
             >
               <Image
                 src={img}
@@ -61,3 +61,4 @@ export default function FeatureSection({ feature, index }: FeatureSectionProps) 
     </motion.div>
   );
 }
+
