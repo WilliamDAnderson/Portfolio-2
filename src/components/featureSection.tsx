@@ -44,7 +44,12 @@ export default function FeatureSection({ feature, index }: FeatureSectionProps) 
             <div
               key={idx}
               className={`relative overflow-hidden rounded-xl
-                ${isOneImage ? 'w-full max-w-[66vw] max-h-[66vh]' : 'w-[45%] max-h-[66vh]'}`}
+                ${isOneImage 
+                  ? 'w-full max-w-[66vw] max-h-[66vh]' // For single image (small and large)
+                  : 'w-[45%] max-h-[66vh]' // Default max-height for two images side by side
+                }
+                md:max-h-[66vh] xl:max-h-[75vh] // max-height for large and extra large screens
+              `}
             >
               <Image
                 src={img}
@@ -52,7 +57,7 @@ export default function FeatureSection({ feature, index }: FeatureSectionProps) 
                 width={0}
                 height={0}
                 sizes="(max-width: 768px) 80vw, 66vw" // Adjust width for different breakpoints
-                className={`object-contain w-full h-full`} // Ensure image maintains aspect ratio
+                className={`object-cover w-full h-full`} // Ensure image fills container
               />
             </div>
           ))}
@@ -61,4 +66,8 @@ export default function FeatureSection({ feature, index }: FeatureSectionProps) 
     </motion.div>
   );
 }
+
+
+
+
 
