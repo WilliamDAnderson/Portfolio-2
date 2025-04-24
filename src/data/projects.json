@@ -74,7 +74,9 @@
                     "image": ["/images/stats_viewer/best.jpg"]
                   }
                 ],
-    "programmers": ["William Anderson"]
+    "programmers": ["William Anderson",
+                    "Yujin Jeong",
+                    "Vincent Marshall"]
   },
   {
     "title": "Chess Bot",
