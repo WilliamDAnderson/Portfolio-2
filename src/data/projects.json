@@ -43,6 +43,40 @@
                     "Salma Rageh"]
   },
   {
+    "title": "Running Stats Viewer",
+    "priority": 2,
+    "year": 2025,
+    "description": "A web application built with Next.js to communicate with the Strava API and display athlete statistics.",
+    "features": [
+                  {
+                    "title": "Login Screen",
+                    "description": "Each user has to login to the app using their strava account.",
+                    "image": ["/images/stats_viewer/login.jpg"]
+                  },
+                  {
+                    "title": "Data Authorization",
+                    "description": "The app needs to be authorized by the user to read their activity data.",
+                    "image": ["/images/stats_viewer/authorization.jpg"]
+                  },
+                  {
+                    "title": "Home Screen",
+                    "description": "A few recent speed and heart rate stats as the home screen.",
+                    "image": ["/images/stats_viewer/home.jpg"]
+                  },
+                  {
+                    "title": "Activities View",
+                    "description": "The user can look through basic details of all their activities.",
+                    "image": ["/images/stats_viewer/activities.jpg"]
+                  },
+                  {
+                    "title": "Best Efforts View",
+                    "description": "The fastest runs can be viewed under each km distance.",
+                    "image": ["/images/stats_viewer/best.jpg"]
+                  }
+                ],
+    "programmers": ["William Anderson"]
+  },
+  {
     "title": "Chess Bot",
     "priority": 1,
     "year": 2024,
@@ -70,7 +104,7 @@
     "title": "Android Trip Planner",
     "priority": 1,
     "year": 2023,
-    "description": "Called the Great Canadian Trip Planner, this android app allows the user to book flights to Canadian cities.",
+    "description": "Called the Great Canadian Trip Planner, this Java android app allows the user to book flights to Canadian cities.",
     "features": [
                   {
                     "title": "View Trips and Write Notes",
